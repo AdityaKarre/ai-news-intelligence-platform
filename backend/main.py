@@ -19,7 +19,7 @@ app = FastAPI(title="🧠 AI News Intelligence Platform Backend Engine")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000",
-                    "https://your-vercel-project.vercel.app"], # Whitelists your Next.js frontend port explicitly
+                    "https://ai-news-intelligence-platform-liart.vercel.app"], # Whitelists your Next.js frontend port explicitly
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
