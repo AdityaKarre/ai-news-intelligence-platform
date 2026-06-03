@@ -18,8 +18,7 @@ app = FastAPI(title="🧠 AI News Intelligence Platform Backend Engine")
 # Configure explicit CORS rules to prevent browser fetch rejections
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000",
-                    "https://ai-news-intelligence-platform-liart.vercel.app"], # Whitelists your Next.js frontend port explicitly
+    allow_origins=["*"], # Whitelists your Next.js frontend port explicitly
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
