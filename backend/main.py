@@ -29,11 +29,11 @@ groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 def get_db_connection():
     return pymysql.connect(
-        host=os.environ.get("DB_HOST", "localhost"),
-        user=os.environ.get("DB_USER", "root"),
-        password=os.environ.get("DB_PASSWORD"), # Verified local password configuration
-        database=os.environ.get("DB_NAME", "ai_news_intelligence"),
-        port=int(os.environ.get("DB_PORT", 3307)), # Verified active local database port
+        host=os.environ.get("MYSQLHOST", "localhost"),
+        user=os.environ.get("MYSQLUSER", "root"),
+        password=os.environ.get("MYSQL_ROOT_PASSWORD"), # Verified local password configuration
+        database=os.environ.get("MYSQLDATABASE", "ai_news_intelligence"),
+        port=int(os.environ.get("MYSQLPORT", 3307)), # Verified active local database port
         cursorclass=pymysql.cursors.DictCursor
     )
 
